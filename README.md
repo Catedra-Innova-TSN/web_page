@@ -69,7 +69,7 @@ src/
 
 > Esta guía explica **dónde editar** cada dato sin tener que tocar la estructura de la web.
 
-### 🖼️ Gestión de Imágenes (IMPORTANTE)
+### Gestión de Imágenes (IMPORTANTE)
 
 Para añadir nuevas imágenes (fotos de eventos, ponentes, logotipos, etc.):
 
