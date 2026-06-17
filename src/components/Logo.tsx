@@ -1,0 +1,13 @@
+interface Props {
+  className?: string;
+}
+
+export function Logo({ className }: Props) {
+  return (
+    <img
+      src="/logos/logo_catedra_blanco_sin_letras.svg"
+      alt="Logo de la Cátedra Innova-tsn UPM"
+      className={`rounded-md bg-transparent p-1 ${className ?? ""}`}
+    />
+  );
+}
