@@ -8,7 +8,10 @@ export const Route = createFileRoute("/seminarios")({
   head: () => ({
     meta: [
       { title: "Seminarios — Cátedra Innova-tsn UPM" },
-      { name: "description", content: "Seminarios anuales de la Cátedra Innova-tsn UPM. Histórico por años." },
+      {
+        name: "description",
+        content: "Seminarios anuales de la Cátedra Innova-tsn UPM. Histórico por años.",
+      },
       { property: "og:title", content: "Seminarios — Cátedra Innova-tsn UPM" },
       { property: "og:description", content: "Seminarios anuales de la Cátedra." },
       { property: "og:url", content: "/seminarios" },
@@ -28,7 +31,6 @@ interface Seminar {
   hue?: number;
   image?: string;
 }
-
 
 interface YearBlock {
   year: number;
@@ -53,6 +55,15 @@ const YEARS: YearBlock[] = [
     seminars: [
       {
         date: "",
+        title: "Desde IA Generativa hasta IAs Agenticas: un cambio de paradigma",
+        speaker: "Roberto Lara Martín - Consultor senior en Innova-tsn",
+        place: "ETSI Informáticos, Aula 6102",
+        desc: "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje.",
+        image: "/images/2026/seminario.jpg",
+        hue: 250,
+      },
+      {
+        date: "",
         title: "From Generative AI to Agentic AI: a paradigm shift ",
         speaker: "Roberto Lara Martín - Senior Consultant en Innova-tsn",
         place: "ETSI Informáticos, Aula 6102",
@@ -61,14 +72,59 @@ const YEARS: YearBlock[] = [
         hue: 250,
       },
     ],
-
+  },
+  {
+    year: 2025,
+    highlight: "Edición actual · Datos, IA y propósito",
+    seminars: [
+      {
+        date: "",
+        title: "Desde IA Generativa hasta IAs Agenticas: un cambio de paradigma",
+        speaker: "Roberto Lara Martín - Consultor senior en Innova-tsn",
+        place: "ETSI Informáticos, Aula 6102",
+        desc: "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje.",
+        image: "/images/2026/seminario.jpg",
+        hue: 250,
+      },
+      {
+        date: "",
+        title: "From Generative AI to Agentic AI: a paradigm shift ",
+        speaker: "Roberto Lara Martín - Senior Consultant en Innova-tsn",
+        place: "ETSI Informáticos, Aula 6102",
+        desc: "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje.",
+        image: "/images/2026/seminario.jpg",
+        hue: 250,
+      },
+    ],
+  },
+  {
+    year: 2023,
+    highlight: "Edición actual · Datos, IA y propósito",
+    seminars: [
+      {
+        date: "",
+        title: "Desde IA Generativa hasta IAs Agenticas: un cambio de paradigma",
+        speaker: "Roberto Lara Martín - Consultor senior en Innova-tsn",
+        place: "ETSI Informáticos, Aula 6102",
+        desc: "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje.",
+        image: "/images/2026/seminario.jpg",
+        hue: 250,
+      },
+      {
+        date: "",
+        title: "From Generative AI to Agentic AI: a paradigm shift ",
+        speaker: "Roberto Lara Martín - Senior Consultant en Innova-tsn",
+        place: "ETSI Informáticos, Aula 6102",
+        desc: "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje.",
+        image: "/images/2026/seminario.jpg",
+        hue: 250,
+      },
+    ],
   },
 ];
 
 function SeminariosPage() {
-  const [openYears, setOpenYears] = useState<Set<number>>(
-    new Set([YEARS[0]?.year])
-  );
+  const [openYears, setOpenYears] = useState<Set<number>>(new Set([YEARS[0]?.year]));
 
   const toggle = (year: number) => {
     setOpenYears((prev) => {
@@ -83,12 +139,12 @@ function SeminariosPage() {
       <section className="relative scan-line">
         <div className="mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-24">
           <h1 className="mt-3 font-display text-5xl font-bold leading-[1.05] md:text-6xl">
-            Seminarios <span className="text-electric text-glow">Innova</span>
+            Seminarios <span className="text-electric text-glow">Innova-tsn</span>
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-white/75">
-            Cada año, la Cátedra organiza un ciclo de seminarios abiertos a
-            estudiantes UPM, profesionales y la comunidad. Encuentra el programa
-            actual y consulta el histórico de ediciones anteriores.
+            Cada año, la Cátedra organiza un ciclo de seminarios abiertos a estudiantes UPM,
+            profesionales y la comunidad. Encuentra el programa actual y consulta el histórico de
+            ediciones anteriores.
           </p>
         </div>
       </section>
@@ -145,7 +201,10 @@ function SeminariosPage() {
                       >
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.15),transparent_60%)]" />
                         {!s.image && (
-                          <Users size={40} className="relative text-white drop-shadow-[0_0_12px_rgba(23,5,218,0.9)]" />
+                          <Users
+                            size={40}
+                            className="relative text-white drop-shadow-[0_0_12px_rgba(23,5,218,0.9)]"
+                          />
                         )}
                       </div>
                       <div className="flex flex-1 flex-col justify-center p-5">
@@ -165,7 +224,6 @@ function SeminariosPage() {
                       </div>
                     </article>
                   ))}
-
                 </div>
               )}
             </div>

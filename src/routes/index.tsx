@@ -21,8 +21,7 @@ export const Route = createFileRoute("/")({
       { title: "Cátedra Innova-tsn UPM — Analytics en la sociedad digital" },
       {
         name: "description",
-        content:
-          "Donde los datos construyen la historia",
+        content: "Donde los datos construyen la historia",
       },
       { property: "og:title", content: "Cátedra Innova-tsn UPM" },
       { property: "og:description", content: "Analytics en la sociedad digital." },
@@ -76,24 +75,48 @@ const PILLARS = [
  * 3. Si omites la propiedad `image`, el componente generará un fondo degradado usando el valor de `hue`.
  */
 const PROJECT_SLIDES: Slide[] = [
-  { title: "Acto de renovación de la cátedra", 
-    subtitle: "La Cátedra Innova-tsn UPM ha renovado su compromiso con la Universidad Politécnica de Madrid para continuar impulsando la investigación y la formación en el ámbito de la ciencia de datos.",
-    image: "images/2026/renovacion_catedra.jpg", hue: 250 },
-  { title: "Try IT!", 
-    subtitle: "Patrocinamos el Congreso Try IT! con talleres, conferencias, una mesa redonda y stand en la feria de talento.", 
-    image: "images/2026/tryit_stand.jpg", hue: 260 },
-  { title: "Make IT!", 
-    subtitle: "Patrocinamos el campamento de verano Make-IT!. Una jornada de aprendizaje que acerca a niños y niñas al mundo de la informática", 
-    image: "images/2024/makeit.jpeg", hue: 240 },
-  { title: "Taller de liderazgo", 
-    subtitle: "La cátedra presenta el taller \"Qué tipo de líder quieres llegar a ser\" impartido por Innova-tsn en la ETSI Informáticos de la UPM.", 
-    image: "images/2024/taller_consultoria.jpg", hue: 270 },
-  { title: "Seminarios", 
-    subtitle: "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje. Taller impartido por Innova-tsn en la ETSI Informáticos de la UPM.", 
-    image: "images/2026/seminario.jpg", hue: 230 },
-  { title: "Oportunidad laboral", 
-    subtitle: "Continuamos gestionando oportunidades para alumnos de Grado y Máster, con posibilidad de incorporación a plantilla según las necesidades de los proyectos.", 
-    image: "images/2026/oportunidad_laboral.jpg", hue: 270 },
+  {
+    title: "Acto de renovación de la cátedra",
+    subtitle:
+      "La Cátedra Innova-tsn UPM ha renovado su compromiso con la Universidad Politécnica de Madrid para continuar impulsando la investigación y la formación en el ámbito de la ciencia de datos.",
+    image: "images/2026/renovacion_catedra.jpg",
+    hue: 250,
+  },
+  {
+    title: "Try IT!",
+    subtitle:
+      "Patrocinamos el Congreso Try IT! con talleres, conferencias, una mesa redonda y stand en la feria de talento.",
+    image: "images/2026/tryit_stand.jpg",
+    hue: 260,
+  },
+  {
+    title: "Make IT!",
+    subtitle:
+      "Patrocinamos el campamento de verano Make-IT!. Una jornada de aprendizaje que acerca a niños y niñas al mundo de la informática",
+    image: "images/2024/makeit.jpeg",
+    hue: 240,
+  },
+  {
+    title: "Taller de liderazgo",
+    subtitle:
+      'La cátedra presenta el taller "Qué tipo de líder quieres llegar a ser" impartido por Innova-tsn en la ETSI Informáticos de la UPM.',
+    image: "images/2024/taller_consultoria.jpg",
+    hue: 270,
+  },
+  {
+    title: "Seminarios",
+    subtitle:
+      "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje. Taller impartido por Innova-tsn en la ETSI Informáticos de la UPM.",
+    image: "images/2026/seminario.jpg",
+    hue: 230,
+  },
+  {
+    title: "Oportunidad laboral",
+    subtitle:
+      "Continuamos gestionando oportunidades para alumnos de Grado y Máster, con posibilidad de incorporación a plantilla según las necesidades de los proyectos.",
+    image: "images/2026/oportunidad_laboral.jpg",
+    hue: 270,
+  },
   {
     title: "Visita al Observatorio I+D+I de la Cátedra",
     subtitle: "Consulta aquí las memorias de la Cátedra publicadas en el observatorio.",
@@ -111,42 +134,80 @@ const PROJECT_SLIDES: Slide[] = [
  * 2. Usa esa ruta en la propiedad `image` (ej. `"images/people/upm/nueva_persona.png"`).
  */
 const TEAM_SLIDES: Slide[] = [
-  { title: "Juan Ignacio Moreno", 
-    subtitle: "Director de la Cátedra Innova-tsn & UK Country Manager & Global Head of AI en Innova-tsn", 
-    image: "images/people/innova/juan_ignacio.png", hue: 250 },
-  { title: "Ana Maria Niño", 
-    subtitle: "Coordinadora de la Cátedra Innova-tsn UPM por parte de Innova-tsn", 
-    image: "images/people/innova/ana_maria.png", hue: 260 },
-  { title: "Begoña Vega", 
-    subtitle: "Head of AI Models & Applications AI Solutions & Strategy en Innova-tsn", 
-    image: "images/people/innova/begona_vega.png", hue: 245 },
-  { title: "Jose Ignacio Bernaldo", 
-    subtitle: "Head of Big Data, AI & ML Technologies", 
-    image: "images/people/innova/jose_ignacio.png", hue: 265 },
-  { title: "Mencía Vega", 
-    subtitle: "Talento y Cultura en Innova-tsn", 
-    image: "images/people/innova/mencia_vega.jpg", hue: 255 },
-  { title: "Elena Villaba", 
-    subtitle: "Directora de la Cátedra Innova-tsn UPM por parte de la UPM. Human-Computer Interaction/UX, personas mayores y salud en la UPM", 
-    image: "images/people/upm/elena_villalba.png", hue: 248 },
-  { title: "Cristian Moral", 
-    subtitle: "Human-Computer Interaction/UX, Virtual Reality en la UPM", 
-    image: "images/people/upm/cristian_moral.jpg", hue: 265 },
-  { title: "Angélica de Antonio", 
-    subtitle: "Human-Computer Interaction/UX, Virtual Reality, eLearning y Psicología en la UPM", 
-    image: "images/people/upm/angelica.png", hue: 255 },
-  { title: "Jose María Barambones", 
-    subtitle: "Human-Computer Interaction/UX, Virtual Reality, Games and AI en la UPM", 
-    image: "images/people/upm/jose_maria_txema.jpg", hue: 248 },
-  { title: "Loic Martínez", 
-    subtitle: "Human-Computer Interaction/UX y accesibilidad en la UPM", 
-    image: "images/people/upm/loic.jpg", hue: 265 },
-  { title: "Ricardo Imbert", 
-    subtitle: "Human-Computer Interaction/UX y agentes en la UPM", 
-    image: "images/people/upm/ricardo.jpg", hue: 255 },
-  { title: "Jaime Ramírez", 
-    subtitle: "Salud, eLearning y psicología en la UPM", 
-    image: "images/people/upm/jaime.png", hue: 248 },
+  {
+    title: "Juan Ignacio Moreno",
+    subtitle:
+      "Director de la Cátedra Innova-tsn & UK Country Manager & Global Head of AI en Innova-tsn",
+    image: "images/people/innova/juan_ignacio.png",
+    hue: 250,
+  },
+  {
+    title: "Ana Maria Niño",
+    subtitle: "Coordinadora de la Cátedra Innova-tsn UPM por parte de Innova-tsn",
+    image: "images/people/innova/ana_maria.png",
+    hue: 260,
+  },
+  {
+    title: "Begoña Vega",
+    subtitle: "Head of AI Models & Applications AI Solutions & Strategy en Innova-tsn",
+    image: "images/people/innova/begona_vega.png",
+    hue: 245,
+  },
+  {
+    title: "Jose Ignacio Bernaldo",
+    subtitle: "Head of Big Data, AI & ML Technologies",
+    image: "images/people/innova/jose_ignacio.png",
+    hue: 265,
+  },
+  {
+    title: "Mencía Vega",
+    subtitle: "Talento y Cultura en Innova-tsn",
+    image: "images/people/innova/mencia_vega.jpg",
+    hue: 255,
+  },
+  {
+    title: "Elena Villaba",
+    subtitle:
+      "Directora de la Cátedra Innova-tsn UPM por parte de la UPM. Human-Computer Interaction/UX, personas mayores y salud en la UPM",
+    image: "images/people/upm/elena_villalba.png",
+    hue: 248,
+  },
+  {
+    title: "Cristian Moral",
+    subtitle: "Human-Computer Interaction/UX, Virtual Reality en la UPM",
+    image: "images/people/upm/cristian_moral.jpg",
+    hue: 265,
+  },
+  {
+    title: "Angélica de Antonio",
+    subtitle: "Human-Computer Interaction/UX, Virtual Reality, eLearning y Psicología en la UPM",
+    image: "images/people/upm/angelica.png",
+    hue: 255,
+  },
+  {
+    title: "Jose María Barambones",
+    subtitle: "Human-Computer Interaction/UX, Virtual Reality, Games and AI en la UPM",
+    image: "images/people/upm/jose_maria_txema.jpg",
+    hue: 248,
+  },
+  {
+    title: "Loic Martínez",
+    subtitle: "Human-Computer Interaction/UX y accesibilidad en la UPM",
+    image: "images/people/upm/loic.jpg",
+    hue: 265,
+  },
+  {
+    title: "Ricardo Imbert",
+    subtitle: "Human-Computer Interaction/UX y agentes en la UPM",
+    image: "images/people/upm/ricardo.jpg",
+    hue: 255,
+  },
+  {
+    title: "Jaime Ramírez",
+    subtitle: "Salud, eLearning y psicología en la UPM",
+    image: "images/people/upm/jaime.png",
+    hue: 248,
+  },
 ];
 
 /**
@@ -157,22 +218,27 @@ const TEAM_SLIDES: Slide[] = [
 const EXPERIENCE_SLIDES: Experience[] = [
   {
     name: "Carmen Romera Navarro",
-    title: "Ingeniera en Tecnologías Industriales de la UPM, Consultora – 4 años en Innova-tsn",
-    description: "Esta es mi primera experiencia laboral, ya que empecé a trabajar en Innova-tsn realizando las prácticas curriculares de mi Máster. Ha sido una experiencia muy enriquecedora. Poder trabajar codo con codo con tantos compañeros de tan amplia experiencia, y que siempre estén dispuestos a ayudarme a mejorar, sin duda, ha propiciado el impulso de mi carrera profesional. Además, es genial trabajar en una empresa que ofrece retos constantes para desarrollar todo tu potencial.",
+    title:
+      "Ingeniera en Tecnologías Industriales de la UPM, Consultora – 3 años y 8 meses en Innova-tsn",
+    description:
+      "Esta es mi primera experiencia laboral, ya que empecé a trabajar en Innova-tsn realizando las prácticas curriculares de mi Máster. Ha sido una experiencia muy enriquecedora. Poder trabajar codo con codo con tantos compañeros de tan amplia experiencia, y que siempre estén dispuestos a ayudarme a mejorar, sin duda, ha propiciado el impulso de mi carrera profesional. Además, es genial trabajar en una empresa que ofrece retos constantes para desarrollar todo tu potencial.",
     image: "images/people/alumni/carmen_romera.jpg",
     hue: 250,
   },
   {
     name: "Roberto Doncel Muñoz",
-    title: "Ingeniero Técnico en Topografía de la UPM, Consultor – 2 años en Innova-tsn",
-    description: "Mi experiencia en Innova-tsn ha sido muy enriquecedora. He tenido la oportunidad de trabajar en proyectos innovadores y de aprender de profesionales con gran experiencia.",
+    title: "Ingeniero Técnico en Topografía de la UPM, Consultor – 3 años y 6 meses en Innova-tsn",
+    description:
+      "Mi experiencia en Innova-tsn ha sido muy enriquecedora. He tenido la oportunidad de trabajar en proyectos innovadores y de aprender de profesionales con gran experiencia.",
     image: "images/people/alumni/roberto_doncel.jpg",
     hue: 250,
   },
   {
     name: "Sonia Prieto Sainz",
-    title: "Ingeniera Técnica en Informática de Gestión, Administrador y Desarrollo del Salesforce  – 6 años en Innova-tsn",
-    description: "Mi experiencia en Innova-tsn ha sido muy enriquecedora. He tenido la oportunidad de trabajar en proyectos innovadores y de aprender de profesionales con gran experiencia.",
+    title:
+      "Ingeniera Técnica en Informática de Gestión, Administrador y Desarrollo del Salesforce – 8 años y 2 meses en Innova-tsn",
+    description:
+      "Mi experiencia en Innova-tsn ha sido muy enriquecedora. He tenido la oportunidad de trabajar en proyectos innovadores y de aprender de profesionales con gran experiencia.",
     image: "images/people/alumni/sonia_prieto.jpg",
     hue: 250,
   },
@@ -180,12 +246,19 @@ const EXPERIENCE_SLIDES: Experience[] = [
 
 /**
  * @constant EVENTS
- * @description Lista de próximos eventos para la sección "Agenda". 
+ * @description Lista de próximos eventos para la sección "Agenda".
  * Los eventos pasados pueden comentarse o borrarse de esta lista.
  */
-const EVENTS = [ 
-  /*{ date: "12 JUN", title: "Sesión TryIt: Datos abiertos de Madrid", place: "ETSI Informáticos · Aula 1", tag: "TryIt" },*/
-  { date: "NONE", title: "NONE", place: "ETSI Informáticos", tag: "NONE" }
+const EVENTS = [
+  { date: "--/09/2026", title: "Inicio de Clases", place: "ETSI Informáticos", tag: "UPM" },
+  {
+    date: "TBD",
+    title: "Entrega al mejor expediente CDIA",
+    place: "ETSI Informáticos",
+    tag: "Graduación ETSIINF UPM",
+  },
+  { date: "--/11/2026", title: "Semana de la ciencia", place: "ETSI Informáticos", tag: "NONE" },
+  { date: "TBD", title: "Try-IT! 2027", place: "ETSI Informáticos", tag: "Try-IT!" },
 ];
 
 /**
@@ -196,19 +269,30 @@ const EVENTS = [
  * 2. Referénciala aquí en la propiedad `image` (ej. `"images/2026/nueva_noticia.jpg"`).
  */
 const NEWS = [
-    {
+  {
     source: "UPM",
     title: "Renovación de la Cátedra Innova-tsn UPM",
-    excerpt: "La Cátedra Innova-tsn ha impulsado más de 50 iniciativas en los ámbitos de la formación, la investigación, el fomento de la excelencia y la atracción de talento, beneficiando a más de 1.000 estudiantes.",
+    excerpt:
+      "La Cátedra Innova-tsn ha impulsado más de 50 iniciativas en los ámbitos de la formación, la investigación, el fomento de la excelencia y la atracción de talento, beneficiando a más de 1.000 estudiantes.",
     when: "1 de Junio de 2026",
     image: "images/2026/renovacion_bienvenida.jpg",
     href: "https://www.upm.es/?id=CON28263&prefmt=articulo&fmt=detail",
     hue: 245,
   },
   {
+    source: "LinkedIn",
+    title: "Seminario",
+    excerpt: "",
+    when: "Marzo 2025",
+    image: "",
+    href: "https://www.linkedin.com/posts/caertedrainnovaupm-maersterencienciadedatos-ugcPost-7440748846353276928-JyOm/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABMp1mkB5e1u6VS6OmwOhynQSWZJPUmmvaQ",
+    hue: 245,
+  },
+  {
     source: "Cátedra Innova-tsn UPM",
     title: "Innova-tsn en el Try IT! como patrocinador diamante",
-    excerpt: "Innova-tsn participa otro año más en el Try IT! 2026 como patrocinador diamante. Feria de empleo, talleres, seminarios, keynotes y scaperoom.",
+    excerpt:
+      "Innova-tsn participa otro año más en el Try IT! 2026 como patrocinador diamante. Feria de empleo, talleres, seminarios, keynotes y scaperoom.",
     when: "16-20 de Marzo 2026",
     image: "images/2026/tryit_feria.jpg",
     href: "/try-it",
@@ -216,11 +300,11 @@ const NEWS = [
   },
   {
     source: "LinkedIn",
-    title: "Cátedra de Innova-tsn en la UPM acompaña a Ricardo Imbert Paredes en su toma de posesión como Director de la ETSIINF",
+    title: "Entrega de premios al mejor expediente CDIA",
     excerpt: "",
-    when: "2 de junio 2025",  
-    image: "images/2025/toma_posesion_ricardo.jpg",
-    href: "https://www.linkedin.com/posts/innovatsn_upm-catedrainnovaupm-caertedraanalytics-activity-7333859651161096192-xDCz?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABMp1mkB5e1u6VS6OmwOhynQSWZJPUmmvaQ",
+    when: "Noviembre 2025",
+    image: "",
+    href: "https://www.linkedin.com/posts/upm-premioinnovatsn-caertedrainnovatsn-ugcPost-7402380660092559360-fpys/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABMp1mkB5e1u6VS6OmwOhynQSWZJPUmmvaQ",
     hue: 245,
   },
   {
@@ -230,6 +314,16 @@ const NEWS = [
     when: "Noviembre 2025",
     image: "images/2025/mesa_redonda_beijin30.jpg",
     href: "https://www.linkedin.com/posts/innovatsn_innovaupmchair-innovatsn-equality-ugcPost-7386417622701084672-gZ47?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABMp1mkB5e1u6VS6OmwOhynQSWZJPUmmvaQ",
+    hue: 245,
+  },
+  {
+    source: "LinkedIn",
+    title:
+      "Cátedra de Innova-tsn en la UPM acompaña a Ricardo Imbert Paredes en su toma de posesión como Director de la ETSIINF",
+    excerpt: "",
+    when: "2 de junio 2025",
+    image: "images/2025/toma_posesion_ricardo.jpg",
+    href: "https://www.linkedin.com/posts/innovatsn_upm-catedrainnovaupm-caertedraanalytics-activity-7333859651161096192-xDCz?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAABMp1mkB5e1u6VS6OmwOhynQSWZJPUmmvaQ",
     hue: 245,
   },
 ];
@@ -244,28 +338,28 @@ const SALA = [
     title: "Sala 1",
     image: "images/sala_zero_one/entrada.jpg",
     href: "/sala1",
-    hue: 250
+    hue: 250,
   },
-    {
+  {
     id: 2,
     title: "Sala 2",
     image: "images/sala_zero_one/cafe.jpg",
     href: "/sala2",
-    hue: 250
+    hue: 250,
   },
   {
     id: 3,
     title: "Sala 3",
     image: "images/sala_zero_one/taller.jpg",
     href: "/sala3",
-    hue: 250
+    hue: 250,
   },
   {
     id: 4,
     title: "Sala 4",
     image: "images/sala_zero_one/1.jpg",
     href: "/sala4",
-    hue: 250
+    hue: 250,
   },
 ];
 
@@ -285,8 +379,8 @@ function Home() {
               <span className="text-electric text-glow">sociedad</span> digital
             </h2>
             <p className="max-w-2xl text-lg text-white/75 md:text-xl">
-              En colaboración con Innova-tsn y la Universidad Politécnica de Madrid, 
-              la Cátedra Innova-tsn UPM investiga, forma y aplica la ciencia de datos en el mundo real.
+              En colaboración con Innova-tsn y la Universidad Politécnica de Madrid, la Cátedra
+              Innova-tsn UPM investiga, forma y aplica la ciencia de datos en el mundo real.
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -306,9 +400,7 @@ function Home() {
 
       {/* PILLARS */}
       <section id="que-hacemos" className="mx-auto max-w-7xl px-4 py-16 md:px-8 scroll-mt-24">
-        <SectionHeader title="Cuatro pilares, una misión">
-
-        </SectionHeader>
+        <SectionHeader title="Cuatro pilares, una misión"></SectionHeader>
         <div className="grid gap-4 md:grid-cols-2">
           {PILLARS.map((p) => (
             <article
@@ -322,7 +414,11 @@ function Home() {
                 }}
               >
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.15),transparent_60%)]" />
-                <img src={p.icon} alt={p.title} className="relative h-24 w-24 drop-shadow-[0_0_12px_rgba(23,5,218,0.9)]" />
+                <img
+                  src={p.icon}
+                  alt={p.title}
+                  className="relative h-24 w-24 drop-shadow-[0_0_12px_rgba(23,5,218,0.9)]"
+                />
               </div>
               <div className="flex flex-1 flex-col justify-center py-6 pr-6">
                 <h3 className="font-display text-xl font-bold">{p.title}</h3>
@@ -351,7 +447,7 @@ function Home() {
 
       {/* EXPERIENCES */}
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-8">
-        <SectionHeader title="Experiencias de primera mano">
+        <SectionHeader title="Sello UPM en Innova-tsn">
           Lo que cuentan quienes han pasado por la Cátedra.
         </SectionHeader>
         <ExperienceCarousel items={EXPERIENCE_SLIDES} />
@@ -359,7 +455,7 @@ function Home() {
 
       {/* EVENTS */}
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-8">
-        <SectionHeader title="Próximos eventos">
+        <SectionHeader title="Calendario de eventos">
           Conferencias, talleres y meetups abiertos a la comunidad.
         </SectionHeader>
         <div className="grid gap-3 md:grid-cols-2">
@@ -399,29 +495,30 @@ function Home() {
               rel="noopener noreferrer"
               className="block"
             >
-            <article
-              className="flex flex-col overflow-hidden rounded-xl border border-electric/30 bg-black/50 backdrop-blur transition hover:border-electric"
-            >
-              <div
-                className="relative aspect-[16/10] w-full"
-                style={{
-                  background: `linear-gradient(135deg, hsl(${n.hue} 90% 18%), #1705DA 70%, #000)`,
-                }}
-              >
-    
-                <img src={n.image} alt={n.title} className="relative w-full shrink-0 h-64 md:h-full" />
-              </div>
-              <div className="flex flex-1 flex-col p-5">
-                <div className="mb-3 inline-flex w-fit items-center gap-2 rounded-full border border-electric/40 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-electric">
-                  <Newspaper size={12} /> {n.source}
+              <article className="flex flex-col overflow-hidden rounded-xl border border-electric/30 bg-black/50 backdrop-blur transition hover:border-electric">
+                <div
+                  className="relative aspect-[16/10] w-full"
+                  style={{
+                    background: `linear-gradient(135deg, hsl(${n.hue} 90% 18%), #1705DA 70%, #000)`,
+                  }}
+                >
+                  <img
+                    src={n.image}
+                    alt={n.title}
+                    className="relative w-full shrink-0 h-64 md:h-full"
+                  />
                 </div>
-                <h3 className="font-display text-lg font-bold leading-snug">{n.title}</h3>
-                <p className="mt-2 flex-1 text-sm text-white/70">{n.excerpt}</p>
-                <div className="mt-4 font-mono text-[10px] uppercase tracking-widest text-white/40">
-                  {n.when}
+                <div className="flex flex-1 flex-col p-5">
+                  <div className="mb-3 inline-flex w-fit items-center gap-2 rounded-full border border-electric/40 px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-electric">
+                    <Newspaper size={12} /> {n.source}
+                  </div>
+                  <h3 className="font-display text-lg font-bold leading-snug">{n.title}</h3>
+                  <p className="mt-2 flex-1 text-sm text-white/70">{n.excerpt}</p>
+                  <div className="mt-4 font-mono text-[10px] uppercase tracking-widest text-white/40">
+                    {n.when}
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
             </a>
           ))}
         </div>
@@ -429,7 +526,7 @@ function Home() {
 
       {/* FIND US */}
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-8" id="encuentranos">
-        <SectionHeader title="ETSI Informáticos  UPM">
+        <SectionHeader title="Aula Innova-tsn ZERO ONE">
           Campus de Montegancedo, Madrid ¡Pasa a vernos!
         </SectionHeader>
         <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr]">
@@ -456,13 +553,13 @@ function Home() {
                   background: `linear-gradient(135deg, hsl(${s.hue} 90% 14%), #1705DA 70%, #000)`,
                 }}
               >
-              <div className="relative w-full shrink-0 h-64 md:h-full">
-                <img src={s.image} alt={s.title} className="relative w-full shrink-0 h-full" />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-1.5 font-mono text-[9px] uppercase tracking-widest text-white/80">
-                  Sala {s.id}
+                <div className="relative w-full shrink-0 h-64 md:h-full">
+                  <img src={s.image} alt={s.title} className="relative w-full shrink-0 h-full" />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-1.5 font-mono text-[9px] uppercase tracking-widest text-white/80">
+                    Sala {s.id}
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
             ))}
           </div>
         </div>
