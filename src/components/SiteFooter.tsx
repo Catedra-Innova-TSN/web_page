@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Github, Linkedin, Twitter, Mail, Youtube } from "lucide-react";
-import { Logo } from "./Logo";
 
 export function SiteFooter() {
   return (
@@ -8,10 +7,24 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-4 md:px-8">
         <div className="md:col-span-2">
           <div className="flex items-center gap-6">
-            <Logo className="h-10 w-10" />
-            <div className="font-display text-lg font-bold">
-              Cátedra <span className="text-electric">Innova-tsn</span> UPM
-            </div>
+            <img
+              src="/logos/catedra/7_nobg.svg"
+              alt="Logo de la Cátedra Innova-tsn UPM"
+              className={`rounded-md bg-transparent p-1 h-24 w-24`}
+            />
+            <div className="font-display text-lg font-bold">Cátedra Innova-tsn y UPM</div>
+          </div>
+          <div className="flex items-center gap-2">
+            <img
+              src="/logos/innova/IN_white_2025_PNG.png"
+              alt="Logo de la Cátedra Innova-tsn UPM"
+              className="rounded-md bg-transparent p-1 h-12"
+            />
+            <img
+              src="/logos/upm/SFS11860.png"
+              alt="Logo de la Cátedra Innova-tsn UPM"
+              className="rounded-md bg-transparent p-1 h-16"
+            />
           </div>
           <p className="mt-4 max-w-md font-mono text-xs uppercase tracking-wider text-white/100">
             Donde los datos construyen la historia
@@ -23,11 +36,31 @@ export function SiteFooter() {
             Enlaces
           </h4>
           <ul className="space-y-2 text-sm text-white/70">
-            <li><Link to="/innova-tsn" className="hover:text-electric">Innova-tsn</Link></li>
-            <li><Link to="/upm" className="hover:text-electric">UPM</Link></li>
-            <li><Link to="/try-it" className="hover:text-electric">TryIt</Link></li>
-            <li><Link to="/make-it" className="hover:text-electric">Make-It</Link></li>
-            <li><Link to="/rootedcon" className="hover:text-electric">RootedCon</Link></li>
+            <li>
+              <Link to="/innova-tsn" className="hover:text-electric">
+                Innova-tsn
+              </Link>
+            </li>
+            <li>
+              <Link to="/upm" className="hover:text-electric">
+                UPM
+              </Link>
+            </li>
+            <li>
+              <Link to="/try-it" className="hover:text-electric">
+                TryIt
+              </Link>
+            </li>
+            <li>
+              <Link to="/make-it" className="hover:text-electric">
+                Make-It
+              </Link>
+            </li>
+            <li>
+              <Link to="/rootedcon" className="hover:text-electric">
+                RootedCon
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -60,11 +93,19 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-white/50 md:flex-row md:px-8">
-          <div>© {new Date().getFullYear()} Cátedra Innova-tsn UPM. Todos los derechos reservados.</div>
+          <div>
+            © {new Date().getFullYear()} Cátedra Innova-tsn UPM. Todos los derechos reservados.
+          </div>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-electric">Aviso legal</a>
-            <a href="#" className="hover:text-electric">Privacidad</a>
-            <a href="#" className="hover:text-electric">Cookies</a>
+            <a href="#" className="hover:text-electric">
+              Aviso legal
+            </a>
+            <a href="#" className="hover:text-electric">
+              Privacidad
+            </a>
+            <a href="#" className="hover:text-electric">
+              Cookies
+            </a>
           </div>
         </div>
       </div>

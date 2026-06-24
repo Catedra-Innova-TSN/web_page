@@ -110,15 +110,54 @@ const TALKS_BY_YEAR: YearTalks[] = [
     year: 2025,
     talks: [
       {
-        date: "18 MAY, 11:00 - 11:40​",
-        title: "Agentic AI: cuando el pensamiento pasa a la acción​",
-        speaker: "Leyre Sánchez - Consultora en IA Generativa - Innova-tsn",
+        date: "18 MAY​",
+        title: "Mesa Redonda: Ética tecnológica​",
+        speaker: "Begoña Vega​ - Head of AI Models & Applications",
         hue: 265,
       },
       {
-        date: "18 MAY, 11:00 - 11:40​",
-        title: "Agentic AI: cuando el pensamiento pasa a la acción​",
-        speaker: "Leyre Sánchez - Consultora en IA Generativa - Innova-tsn",
+        date: "19 MAY​",
+        title: "Del campo de fútbol a la sala de proyectos tecnológicos​",
+        speaker: "Alin Nicolae Giurca​ - Project Manager Innova-tsn",
+        hue: 265,
+      },
+      {
+        date: "20 MAY​",
+        title: "Uso de la IA para la optimización y automatización de procesos de recruiting​",
+        speaker:
+          "Juan Ignacio Moreno​ - Chief Infraestructure Officer & Solution Architecture Innova-tsn​; Jose Barambones",
+        hue: 265,
+      },
+    ],
+  },
+  {
+    year: 2024,
+    talks: [
+      {
+        date: "18 MAY​",
+        title: "Ingeniería de prompts: técnicas y estrategias para Large Language Models​",
+        speaker: "Fernando Sebastián​ - Senior Data Scientist Innova-tsn",
+        hue: 265,
+      },
+      {
+        date: "20 MAY​",
+        title:
+          "Cómo montar un departamento de ciberseguridad sin morir en el intento. Una perspectiva de Innova-tsn​​",
+        speaker:
+          "Luis Jorge González - Chief Infraestructure Officer & Solution Architecture Innova-tsn; Jose Manuel Toloba - Lead Project Manager for Internal Systems and Cybersecurity Area ​Innova-tsn",
+        hue: 265,
+      },
+      {
+        date: "21 MAY​",
+        title: "¿Cómo será tu trabajo en proyectos de IA y Data?​​",
+        speaker: "Ignacio Barahona - Head of Data Value y Socio Fundador de Innova-tsn",
+        hue: 265,
+      },
+      {
+        date: "22 MAY​",
+        title: "¡Piensa estratégicamente para ser diferente!​​",
+        speaker:
+          "Ana María Niño - Comunicadora Estratégica​ y Consultora Desarrollo de Negocio Innova-tsn",
         hue: 265,
       },
     ],
@@ -133,11 +172,7 @@ function TryItPage() {
   return (
     <InnerPage
       eyebrow=""
-      title={
-        <>
-          Try<span className="text-electric text-glow">-IT</span>!
-        </>
-      }
+      title={<>Try-IT!</>}
       description="El Try It! es el congreso tecnológico más grande de la UPM. Su objetivo de acercar las tendencias tecnológicas actuales a los participantes, así como ofrecer un contacto directo con las empresas más punteras del sector."
     >
       {/* Carrusel principal */}

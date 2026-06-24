@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Logo } from "./Logo";
 
 const NAV = [
   { to: "/", label: "Inicio" },
@@ -10,18 +9,21 @@ const NAV = [
   { to: "/try-it", label: "Try-IT!" },
   { to: "/make-it", label: "Make-IT!" },
   { to: "/seminarios", label: "Seminarios" },
-  { to: "/rootedcon", label: "RootedCon" },
 ] as const;
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 border-b border-electric/30 bg-black/60 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-0 md:px-8">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <Logo className="h-16 w-16" />
+          <img
+            src="/logos/catedra/7_nobg.svg"
+            alt="Logo de la Cátedra Innova-tsn UPM"
+            className={`rounded-md bg-transparent p-1 h-16 w-16`}
+          />
           <span className="font-display text-sm font-bold tracking-tight md:text-base">
-            Cátedra <span className="text-electric text-glow">Innova-tsn</span> UPM
+            Cátedra Innova-tsn UPM
           </span>
         </Link>
         <nav className="hidden items-center gap-1 lg:flex">

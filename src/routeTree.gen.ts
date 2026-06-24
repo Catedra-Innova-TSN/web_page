@@ -13,7 +13,6 @@ import { Route as UpmRouteImport } from './routes/upm'
 import { Route as TryItRouteImport } from './routes/try-it'
 import { Route as SidemapDotxmlRouteImport } from './routes/sidemap[.]xml'
 import { Route as SeminariosRouteImport } from './routes/seminarios'
-import { Route as RootedconRouteImport } from './routes/rootedcon'
 import { Route as MakeItRouteImport } from './routes/make-it'
 import { Route as InnovaTsnRouteImport } from './routes/innova-tsn'
 import { Route as IndexRouteImport } from './routes/index'
@@ -38,11 +37,6 @@ const SeminariosRoute = SeminariosRouteImport.update({
   path: '/seminarios',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RootedconRoute = RootedconRouteImport.update({
-  id: '/rootedcon',
-  path: '/rootedcon',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const MakeItRoute = MakeItRouteImport.update({
   id: '/make-it',
   path: '/make-it',
@@ -63,7 +57,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/innova-tsn': typeof InnovaTsnRoute
   '/make-it': typeof MakeItRoute
-  '/rootedcon': typeof RootedconRoute
   '/seminarios': typeof SeminariosRoute
   '/sidemap.xml': typeof SidemapDotxmlRoute
   '/try-it': typeof TryItRoute
@@ -73,7 +66,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/innova-tsn': typeof InnovaTsnRoute
   '/make-it': typeof MakeItRoute
-  '/rootedcon': typeof RootedconRoute
   '/seminarios': typeof SeminariosRoute
   '/sidemap.xml': typeof SidemapDotxmlRoute
   '/try-it': typeof TryItRoute
@@ -84,7 +76,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/innova-tsn': typeof InnovaTsnRoute
   '/make-it': typeof MakeItRoute
-  '/rootedcon': typeof RootedconRoute
   '/seminarios': typeof SeminariosRoute
   '/sidemap.xml': typeof SidemapDotxmlRoute
   '/try-it': typeof TryItRoute
@@ -96,7 +87,6 @@ export interface FileRouteTypes {
     | '/'
     | '/innova-tsn'
     | '/make-it'
-    | '/rootedcon'
     | '/seminarios'
     | '/sidemap.xml'
     | '/try-it'
@@ -106,7 +96,6 @@ export interface FileRouteTypes {
     | '/'
     | '/innova-tsn'
     | '/make-it'
-    | '/rootedcon'
     | '/seminarios'
     | '/sidemap.xml'
     | '/try-it'
@@ -116,7 +105,6 @@ export interface FileRouteTypes {
     | '/'
     | '/innova-tsn'
     | '/make-it'
-    | '/rootedcon'
     | '/seminarios'
     | '/sidemap.xml'
     | '/try-it'
@@ -127,7 +115,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   InnovaTsnRoute: typeof InnovaTsnRoute
   MakeItRoute: typeof MakeItRoute
-  RootedconRoute: typeof RootedconRoute
   SeminariosRoute: typeof SeminariosRoute
   SidemapDotxmlRoute: typeof SidemapDotxmlRoute
   TryItRoute: typeof TryItRoute
@@ -164,13 +151,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SeminariosRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/rootedcon': {
-      id: '/rootedcon'
-      path: '/rootedcon'
-      fullPath: '/rootedcon'
-      preLoaderRoute: typeof RootedconRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/make-it': {
       id: '/make-it'
       path: '/make-it'
@@ -199,7 +179,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   InnovaTsnRoute: InnovaTsnRoute,
   MakeItRoute: MakeItRoute,
-  RootedconRoute: RootedconRoute,
   SeminariosRoute: SeminariosRoute,
   SidemapDotxmlRoute: SidemapDotxmlRoute,
   TryItRoute: TryItRoute,

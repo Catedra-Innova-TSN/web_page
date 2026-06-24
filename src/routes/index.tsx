@@ -41,25 +41,25 @@ export const Route = createFileRoute("/")({
  */
 const PILLARS = [
   {
-    icon: "public/icons/loupe.svg",
+    icon: "public/icons/2026/lupa.png",
     title: "I+D+i para la sociedad",
     desc: "Aplicación práctica de datos y tecnología complementa a la perfección el enfoque académico de la UPM. Esta asociación permite la transferencia de los resultados de investigación en soluciones que benefician a la industria, la academia y a la sociedad en general.",
     hue: 250,
   },
   {
-    icon: "public/icons/mortarboard.svg",
+    icon: "public/icons/2026/birrete.png",
     title: "Fomento del Talento",
     desc: "La Cátedra fomenta un entorno de aprendizaje dinámico en el que los estudiantes de la UPM pueden interactuar con proyectos reales del sector de Innova-tsn. Esta exposición complementa su formación y les dota de habilidades para estar a la vanguardia del mercado laboral.",
     hue: 260,
   },
   {
-    icon: "public/icons/coach.svg",
+    icon: "public/icons/2026/mentoria.png",
     title: "Mentoring",
     desc: "Profesionales experimentados actuarán como mentores, guiando a los estudiantes para hacer puente entre la academia y la industria. Esta Cátedra busca nutrir a la sociedad de nuevas generaciones de profesionales capaces de abordar cualquier reto tecnológico. ",
     hue: 245,
   },
   {
-    icon: "public/icons/worldwide.svg",
+    icon: "public/icons/2026/mundo.png",
     title: "Aplicación en el Mundo Real",
     desc: "papel de la UPM como nexo para la difusión del conocimiento, canalización de iniciativas científicas y de investigación, y el compromiso con la comunidad. Los proyectos de estudio, talleres y seminarios conjuntos ayudarán a resolver problemas del mundo real.",
     hue: 265,
@@ -93,7 +93,7 @@ const PROJECT_SLIDES: Slide[] = [
     title: "Make IT!",
     subtitle:
       "Patrocinamos el campamento de verano Make-IT!. Una jornada de aprendizaje que acerca a niños y niñas al mundo de la informática",
-    image: "images/2024/makeit.jpeg",
+    image: "images/2026/make_1.jpeg",
     hue: 240,
   },
   {
@@ -111,6 +111,13 @@ const PROJECT_SLIDES: Slide[] = [
     hue: 230,
   },
   {
+    title: "I+D+I",
+    subtitle:
+      "La Cátedra Innova-tsn UPM impulsa la investigación y el desarrollo de soluciones innovadoras en el ámbito de la ciencia de datos, la inteligencia artificial y la analítica avanzada.",
+    image: "images/2026/renovacion_bienvenida.jpg",
+    hue: 230,
+  },
+  {
     title: "Oportunidad laboral",
     subtitle:
       "Continuamos gestionando oportunidades para alumnos de Grado y Máster, con posibilidad de incorporación a plantilla según las necesidades de los proyectos.",
@@ -121,7 +128,7 @@ const PROJECT_SLIDES: Slide[] = [
     title: "Visita al Observatorio I+D+I de la Cátedra",
     subtitle: "Consulta aquí las memorias de la Cátedra publicadas en el observatorio.",
     href: "https://www.upm.es/observatorio/vi/index.jsp?pageac=proyectos/ficha_proyecto.jsp&idp=18805&tipo=Catedras",
-    image: "images/observatorio.png",
+    image: "images/observatorio3.png",
     hue: 230,
   },
 ];
@@ -281,10 +288,11 @@ const NEWS = [
   },
   {
     source: "LinkedIn",
-    title: "Seminario",
-    excerpt: "",
+    title: "Seminario: Desde IA Generativa hasta IAs Agenticas: un cambio de paradigma",
+    excerpt:
+      "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje. Taller impartido por Innova-tsn en la ETSI Informáticos de la UPM.",
     when: "Marzo 2025",
-    image: "",
+    image: "images/2026/seminarios_new.jpg",
     href: "https://www.linkedin.com/posts/caertedrainnovaupm-maersterencienciadedatos-ugcPost-7440748846353276928-JyOm/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABMp1mkB5e1u6VS6OmwOhynQSWZJPUmmvaQ",
     hue: 245,
   },
@@ -303,7 +311,7 @@ const NEWS = [
     title: "Entrega de premios al mejor expediente CDIA",
     excerpt: "",
     when: "Noviembre 2025",
-    image: "",
+    image: "images/2025/graduacion.jpeg",
     href: "https://www.linkedin.com/posts/upm-premioinnovatsn-caertedrainnovatsn-ugcPost-7402380660092559360-fpys/?utm_source=share&utm_medium=member_desktop&rcm=ACoAABMp1mkB5e1u6VS6OmwOhynQSWZJPUmmvaQ",
     hue: 245,
   },
@@ -337,28 +345,24 @@ const SALA = [
     id: 1,
     title: "Sala 1",
     image: "images/sala_zero_one/entrada.jpg",
-    href: "/sala1",
     hue: 250,
   },
   {
     id: 2,
     title: "Sala 2",
     image: "images/sala_zero_one/cafe.jpg",
-    href: "/sala2",
     hue: 250,
   },
   {
     id: 3,
     title: "Sala 3",
     image: "images/sala_zero_one/taller.jpg",
-    href: "/sala3",
     hue: 250,
   },
   {
     id: 4,
     title: "Sala 4",
     image: "images/sala_zero_one/1.jpg",
-    href: "/sala4",
     hue: 250,
   },
 ];
@@ -369,30 +373,39 @@ function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden scan-line">
         <div className="mx-auto max-w-7xl px-4 py-20 md:px-8 md:py-28">
-          <div className="flex flex-col items-start gap-6">
-            <Logo className="h-64 w-64" />
-            <h1 className="font-display text-5xl font-bold leading-[1.05] md:text-7xl">
-              Cátedra Innova-tsn x UPM <br />
-            </h1>
-            <h2 className="font-display text-5xl font-bold leading-[1.05] md:text-7xl">
-              Analytics en la <br />
-              <span className="text-electric text-glow">sociedad</span> digital
-            </h2>
-            <p className="max-w-2xl text-lg text-white/75 md:text-xl">
-              En colaboración con Innova-tsn y la Universidad Politécnica de Madrid, la Cátedra
-              Innova-tsn UPM investiga, forma y aplica la ciencia de datos en el mundo real.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a
-                href="#que-hacemos"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById("que-hacemos")?.scrollIntoView({ behavior: "smooth" });
-                }}
-                className="group inline-flex items-center gap-2 rounded-md bg-electric px-5 py-3 font-mono text-sm uppercase tracking-wider text-white border-glow"
-              >
-                Saber más <ArrowDown size={16} className="transition group-hover:translate-y-1" />
-              </a>
+          <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:gap-16">
+            {/* Columna izquierda: Logo */}
+            <div className="flex shrink-0 justify-center md:justify-start">
+              <Logo className="h-128 w-128 md:h-64 md:w-64" />
+            </div>
+
+            {/* Columna derecha: Textos */}
+            <div className="flex flex-col items-start gap-6">
+              <h1 className="font-display font-bold leading-[1.05] flex flex-col gap-4">
+                <span className="text-2xl md:text-4xl lg:text-7xl">Cátedra Innova-tsn y UPM</span>
+                <span className="text-xl md:text-3xl lg:text-5xl">
+                  Analytics en la sociedad digital
+                </span>
+                <span className="text-lg md:text-2xl lg:text-3xl italic">
+                  &ldquo;Donde los datos construyen la historia&rdquo;
+                </span>
+              </h1>
+              <p className="max-w-2xl text-lg text-white/75 md:text-xl">
+                En colaboración con Innova-tsn y la Universidad Politécnica de Madrid, la Cátedra
+                Innova-tsn UPM investiga, forma y aplica la ciencia de datos en el mundo real.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href="#que-hacemos"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("que-hacemos")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="group inline-flex items-center gap-2 rounded-md bg-orange px-5 py-3 font-mono text-sm uppercase tracking-wider text-white"
+                >
+                  Saber más <ArrowDown size={16} className="transition group-hover:translate-y-1" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -407,18 +420,9 @@ function Home() {
               key={p.title}
               className="group relative flex items-stretch gap-5 overflow-hidden rounded-xl border border-electric/30 bg-black/50 backdrop-blur transition hover:border-electric min-h-[200px]"
             >
-              <div
-                className="relative flex w-[30%] shrink-0 items-center justify-center self-stretch overflow-hidden"
-                style={{
-                  background: `linear-gradient(135deg, hsl(${p.hue} 90% 16%), #1705DA 70%, #000)`,
-                }}
-              >
+              <div className="relative flex w-[30%] shrink-0 items-center justify-center self-stretch overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.15),transparent_60%)]" />
-                <img
-                  src={p.icon}
-                  alt={p.title}
-                  className="relative h-24 w-24 drop-shadow-[0_0_12px_rgba(23,5,218,0.9)]"
-                />
+                <img src={p.icon} alt={p.title} className="relative h-24 w-24]" />
               </div>
               <div className="flex flex-1 flex-col justify-center py-6 pr-6">
                 <h3 className="font-display text-xl font-bold">{p.title}</h3>
@@ -545,7 +549,6 @@ function Home() {
             {SALA.map((s) => (
               <a
                 key={s.id}
-                href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative aspect-square overflow-hidden rounded-lg border border-electric/30"
@@ -555,9 +558,6 @@ function Home() {
               >
                 <div className="relative w-full shrink-0 h-64 md:h-full">
                   <img src={s.image} alt={s.title} className="relative w-full shrink-0 h-full" />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-1.5 font-mono text-[9px] uppercase tracking-widest text-white/80">
-                    Sala {s.id}
-                  </div>
                 </div>
               </a>
             ))}

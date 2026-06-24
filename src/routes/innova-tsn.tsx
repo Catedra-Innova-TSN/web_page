@@ -19,32 +19,29 @@ export const Route = createFileRoute("/innova-tsn")({
   component: () => (
     <InnerPage
       eyebrow=""
-      title={
-        <>
-          Innova-<span className="text-electric text-glow">tsn</span>
-        </>
-      }
-      description="Innova-tsn es una compañía con casi 22 años de trayectoria, especializada en el diseño e implementación de soluciones tecnológicas y de negocio basadas en analítica avanzada. A lo largo de su evolución, se ha consolidado como uno de los referentes del sector, ofreciendo servicios end-to-end que abarcan desde la estrategia y provisión de infraestructuras cloud hasta la ejecución de proyectos y consultoría especializada. Con sede central en Madrid y presencia en Barcelona, Santander, Londres, Bogotá y Ciudad de México, la compañía destaca por su compromiso con la excelencia, la innovación y la generación de valor para sus clientes."
+      title={<>Innova-tsn</>}
+      description="Innova-tsn es una consultora multinacional española especializada en Analítica Avanzada, Inteligencia Artificial y Cloud. Fundada en 2004, ayuda a organizaciones de distintos sectores a transformar sus datos en valor mediante soluciones end-to-end que abarcan desde la estrategia y la infraestructura tecnológica hasta la implantación y evolución de soluciones avanzadas.
+Con más de 300 profesionales y presencia en Madrid, Barcelona, Santander, Londres, Bogotá y Ciudad de México, destaca por su excelencia tecnológica, visión de negocio y compromiso con la innovación responsable."
       externalUrl="https://www.innova-tsn.com"
       externalLabel="innova-tsn.com"
     >
       <InfoGrid
         items={[
           {
-            title: "Datos & Analítica",
-            desc: "Plataformas de datos, gobierno y explotación analítica end-to-end.",
+            title: "Data Analytics & Modern BI",
+            desc: "Diseño e implantación de plataformas de datos para integrar, gobernar y explotar la información de forma eficiente. ",
           },
           {
-            title: "Inteligencia Artificial",
-            desc: "Modelos predictivos y generativos aplicados al negocio.",
-          },
-          {
-            title: "Consultoría tecnológica",
-            desc: "Acompañamiento estratégico y entrega ágil de soluciones.",
+            title: "AI Solutions",
+            desc: "Desarrollo de soluciones de Inteligencia Artificial predictiva y generativa orientadas a optimizar procesos y mejorar la toma de decisiones.",
           },
           {
             title: "Cloud Strategy & Implementation",
-            desc: "Diseño, migración y optimización de entornos cloud escalables y seguros.",
+            desc: "Definición, migración e implantación de estrategias cloud seguras, escalables y preparadas para impulsar la innovación.",
+          },
+          {
+            title: "Consultoría Tecnológica",
+            desc: "Acompañamiento estratégico a organizaciones mediante consultoría especializada y ejecución ágil de proyectos.",
           },
         ]}
       />

@@ -58,6 +58,7 @@
   --ring: oklch(0.55 0.32 268);
   --electric: #4ab6f8;
   --electric-glow: oklch(0.6 0.32 268);
+  --orange: #E84F17;
 }
 
 @layer base {
@@ -96,6 +97,10 @@
 
 @utility bg-electric {
   background-color: var(--electric);
+}
+
+@utility bg-orange {
+  background-color: var(--orange);
 }
 
 @utility text-electric {

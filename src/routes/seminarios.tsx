@@ -139,7 +139,7 @@ function SeminariosPage() {
       <section className="relative scan-line">
         <div className="mx-auto max-w-6xl px-4 py-20 md:px-8 md:py-24">
           <h1 className="mt-3 font-display text-5xl font-bold leading-[1.05] md:text-6xl">
-            Seminarios <span className="text-electric text-glow">Innova-tsn</span>
+            Seminarios Innova-tsn
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-white/75">
             Cada año, la Cátedra organiza un ciclo de seminarios abiertos a estudiantes UPM,

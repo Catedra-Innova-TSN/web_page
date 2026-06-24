@@ -16,13 +16,17 @@ export function MatrixBackground() {
     let height = (canvas.height = window.innerHeight);
     const fontSize = 14;
     let columns = Math.floor(width / fontSize);
-    let drops: number[] = Array(columns).fill(1).map(() => Math.random() * -50);
+    let drops: number[] = Array(columns)
+      .fill(1)
+      .map(() => Math.random() * -50);
 
     const resize = () => {
       width = canvas.width = window.innerWidth;
       height = canvas.height = window.innerHeight;
       columns = Math.floor(width / fontSize);
-      drops = Array(columns).fill(1).map(() => Math.random() * -50);
+      drops = Array(columns)
+        .fill(1)
+        .map(() => Math.random() * -50);
     };
     window.addEventListener("resize", resize);
 
@@ -66,7 +70,7 @@ export function MatrixBackground() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse at 16% 16%, rgba(23,5,218,0.7), transparent 28%), radial-gradient(ellipse at 78% 0%, rgba(23,5,218,0.34), transparent 24%), radial-gradient(ellipse at 50% 100%, rgba(23,5,218,0.2), transparent 42%), linear-gradient(180deg, rgba(11,14,82,0.2), rgba(0,0,0,0.72))",
+            "radial-gradient(ellipse at 16% 16%, rgba(1, 48, 151, 1), transparent 28%), radial-gradient(ellipse at 78% 0%, rgba(23,5,218,0.34), transparent 24%), radial-gradient(ellipse at 50% 100%, rgba(23,5,218,0.2), transparent 42%), linear-gradient(180deg, rgba(11,14,82,0.2), rgba(0,0,0,0.72))",
         }}
       />
     </div>

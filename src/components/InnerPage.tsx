@@ -11,7 +11,14 @@ interface Props {
   children: ReactNode;
 }
 
-export function InnerPage({ eyebrow, title, description, externalUrl, externalLabel, children }: Props) {
+export function InnerPage({
+  eyebrow,
+  title,
+  description,
+  externalUrl,
+  externalLabel,
+  children,
+}: Props) {
   return (
     <PageShell>
       <section className="relative scan-line">
@@ -28,7 +35,7 @@ export function InnerPage({ eyebrow, title, description, externalUrl, externalLa
               href={externalUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 rounded-md bg-electric px-5 py-3 font-mono text-sm uppercase tracking-wider text-white border-glow"
+              className="mt-6 inline-flex items-center gap-2 rounded-md bg-orange px-5 py-3 font-mono text-sm uppercase tracking-wider text-white"
             >
               {externalLabel ?? "Visitar web oficial"} <ExternalLink size={14} />
             </a>
@@ -40,11 +47,7 @@ export function InnerPage({ eyebrow, title, description, externalUrl, externalLa
   );
 }
 
-export function InfoGrid({
-  items,
-}: {
-  items: { title: string; desc: string }[];
-}) {
+export function InfoGrid({ items }: { items: { title: string; desc: string }[] }) {
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {items.map((i) => (

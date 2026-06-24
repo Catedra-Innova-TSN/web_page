@@ -22,7 +22,12 @@ interface Props {
   slideSize?: "sm" | "md";
 }
 
-export function AutoCarousel({ slides, aspect = "aspect-[16/9]", autoplayMs = 4000, slideSize = "md" }: Props) {
+export function AutoCarousel({
+  slides,
+  aspect = "aspect-[16/9]",
+  autoplayMs = 4000,
+  slideSize = "md",
+}: Props) {
   const basis =
     slideSize === "sm"
       ? "flex-[0_0_50%] md:flex-[0_0_30%] lg:flex-[0_0_22%]"
@@ -44,7 +49,10 @@ export function AutoCarousel({ slides, aspect = "aspect-[16/9]", autoplayMs = 40
 
   return (
     <div className="relative">
-      <div className="overflow-hidden rounded-xl border border-electric/40 bg-black/50" ref={emblaRef}>
+      <div
+        className="overflow-hidden rounded-xl border border-electric/40 bg-black/50"
+        ref={emblaRef}
+      >
         <div className="flex">
           {slides.map((s, i) => (
             <div key={i} className={`min-w-0 ${basis} pl-0`}>
@@ -63,12 +71,18 @@ export function AutoCarousel({ slides, aspect = "aspect-[16/9]", autoplayMs = 40
                   >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.15),transparent_60%)]" />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4">
-                      <div className="font-display text-lg font-bold text-white text-readable">{s.title}</div>
+                      <div className="font-display text-lg font-bold text-white text-readable">
+                        {s.title}
+                      </div>
                       {s.subtitle && (
-                        <div className="mt-1 font-mono text-xs text-white/70 text-readable">{s.subtitle}</div>
+                        <div className="mt-1 font-mono text-xs text-white/70 text-readable">
+                          {s.subtitle}
+                        </div>
                       )}
                       {s.description && (
-                        <div className="mt-2 font-mono text-sm text-white/70 text-readable">{s.description}</div>
+                        <div className="mt-2 font-mono text-sm text-white/70 text-readable">
+                          {s.description}
+                        </div>
                       )}
                     </div>
                   </a>
@@ -82,13 +96,19 @@ export function AutoCarousel({ slides, aspect = "aspect-[16/9]", autoplayMs = 40
                     }}
                   >
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.15),transparent_60%)]" />
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent p-4">
-                      <div className="font-display text-lg font-bold text-white text-readable">{s.title}</div>
+                    <div className="absolute bottom-0 left-0 right-0 bg-black/50 rounded-b-xl p-4 border-t border-white/10">
+                      <div className="font-display text-lg font-bold text-white text-readable">
+                        {s.title}
+                      </div>
                       {s.subtitle && (
-                        <div className="mt-1 font-mono text-xs text-white/70 text-readable">{s.subtitle}</div>
+                        <div className="mt-1 font-mono text-xs text-white text-readable">
+                          {s.subtitle}
+                        </div>
                       )}
                       {s.description && (
-                        <div className="mt-2 font-mono text-sm text-white/70 text-readable">{s.description}</div>
+                        <div className="mt-2 font-mono text-sm text-whit text-readable">
+                          {s.description}
+                        </div>
                       )}
                     </div>
                   </div>
@@ -101,28 +121,26 @@ export function AutoCarousel({ slides, aspect = "aspect-[16/9]", autoplayMs = 40
 
       <button
         onClick={() => embla?.scrollPrev()}
-        className="absolute left-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-electric/60 bg-black/70 text-white backdrop-blur hover:bg-electric"
+        className="absolute left-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-electric/60 bg-black/70 text-white backdrop-blur hover:bg-orange focus:bg-orange"
         aria-label="Anterior"
       >
         <ChevronLeft size={20} />
       </button>
       <button
         onClick={() => embla?.scrollNext()}
-        className="absolute right-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-electric/60 bg-black/70 text-white backdrop-blur hover:bg-electric"
+        className="absolute right-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-electric/60 bg-black/70 text-white backdrop-blur hover:bg-orange focus:bg-orange"
         aria-label="Siguiente"
       >
         <ChevronRight size={20} />
       </button>
 
-      <div className="mt-4 flex justify-center gap-1.5">
+      <div className="mt-4 flex justify-center gap-1.5" aria-hidden="true">
         {slides.map((_, i) => (
-          <button
+          <div
             key={i}
-            onClick={() => embla?.scrollTo(i)}
             className={`h-1.5 rounded-full transition-all ${
-              i === selected ? "w-8 bg-electric" : "w-2 bg-white/30"
+              i === selected ? "w-8 bg-orange" : "w-2 bg-white/30"
             }`}
-            aria-label={`Ir al slide ${i + 1}`}
           />
         ))}
       </div>

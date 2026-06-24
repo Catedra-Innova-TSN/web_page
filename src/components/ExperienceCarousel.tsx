@@ -34,7 +34,10 @@ export function ExperienceCarousel({ items, autoplayMs = 6000 }: Props) {
 
   return (
     <div className="relative">
-      <div className="overflow-hidden rounded-xl border border-electric/40 bg-black/50" ref={emblaRef}>
+      <div
+        className="overflow-hidden rounded-xl border border-electric/40 bg-black/50"
+        ref={emblaRef}
+      >
         <div className="flex">
           {items.map((it, i) => (
             <div key={i} className="min-w-0 flex-[0_0_100%]">
@@ -69,26 +72,25 @@ export function ExperienceCarousel({ items, autoplayMs = 6000 }: Props) {
 
       <button
         onClick={() => embla?.scrollPrev()}
-        className="absolute left-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-electric/60 bg-black/70 text-white backdrop-blur hover:bg-electric"
+        className="absolute left-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-electric/60 bg-black/70 text-white backdrop-blur hover:bg-orange focus:bg-orange"
         aria-label="Anterior"
       >
         <ChevronLeft size={20} />
       </button>
       <button
         onClick={() => embla?.scrollNext()}
-        className="absolute right-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-electric/60 bg-black/70 text-white backdrop-blur hover:bg-electric"
+        className="absolute right-2 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-electric/60 bg-black/70 text-white backdrop-blur hover:bg-orange focus:bg-orange"
         aria-label="Siguiente"
       >
         <ChevronRight size={20} />
       </button>
 
-      <div className="mt-4 flex justify-center gap-1.5">
+      <div className="mt-4 flex justify-center gap-1.5" aria-hidden="true">
         {items.map((_, i) => (
-          <button
+          <div
             key={i}
-            onClick={() => embla?.scrollTo(i)}
             className={`h-1.5 rounded-full transition-all ${
-              i === selected ? "w-8 bg-electric" : "w-2 bg-white/30"
+              i === selected ? "w-8 bg-orange" : "w-2 bg-white/30"
             }`}
             aria-label={`Ir al slide ${i + 1}`}
           />
