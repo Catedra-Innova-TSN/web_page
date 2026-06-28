@@ -56,19 +56,10 @@ const YEARS: YearBlock[] = [
       {
         date: "",
         title: "Desde IA Generativa hasta IAs Agenticas: un cambio de paradigma",
-        speaker: "Roberto Lara Martín - Consultor senior en Innova-tsn",
+        speaker: "Roberto Lara Martín - Consultor senior y Data Scientist en Innova-tsn",
         place: "ETSI Informáticos, Aula 6102",
-        desc: "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje.",
-        image: "/images/2026/seminario.jpg",
-        hue: 250,
-      },
-      {
-        date: "",
-        title: "From Generative AI to Agentic AI: a paradigm shift ",
-        speaker: "Roberto Lara Martín - Senior Consultant en Innova-tsn",
-        place: "ETSI Informáticos, Aula 6102",
-        desc: "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje.",
-        image: "/images/2026/seminario.jpg",
+        desc: "Cómo la IA Agéntica está transformando la forma de diseñar soluciones inteligentes, pasando de modelos tradicionales a sistemas capaces de planificar, actuar y colaborar de forma autónoma. En este seminario se han revisado los fundamentos de este nuevo paradigma, cómo construir agentes desde cero mediante instrucciones, herramientas y memoria, y desarrollarás un caso práctico para poner los conceptos en acción. Además, se explora la orquestación de sistemas multiagente, la especialización de agentes y el papel del Human-in-the-Loop, adquiriendo una visión práctica y actual de una de las tecnologías con mayor proyección en el ámbito de la inteligencia artificial.",
+        image: "/images/2026/seminario2.jpg",
         hue: 250,
       },
     ],
@@ -79,20 +70,13 @@ const YEARS: YearBlock[] = [
     seminars: [
       {
         date: "",
-        title: "Desde IA Generativa hasta IAs Agenticas: un cambio de paradigma",
-        speaker: "Roberto Lara Martín - Consultor senior en Innova-tsn",
-        place: "ETSI Informáticos, Aula 6102",
-        desc: "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje.",
-        image: "/images/2026/seminario.jpg",
-        hue: 250,
-      },
-      {
-        date: "",
-        title: "From Generative AI to Agentic AI: a paradigm shift ",
-        speaker: "Roberto Lara Martín - Senior Consultant en Innova-tsn",
-        place: "ETSI Informáticos, Aula 6102",
-        desc: "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje.",
-        image: "/images/2026/seminario.jpg",
+        title:
+          "Desarrollo e industrialización de soluciones basadas en inteligencia artificial bajo los principios de MLOps / LLMOps",
+        speaker:
+          "José Ignacio Bernaldo - Responsable de Big Data, Inteligencia Artificial y Tecnologías de Machine Learning en Innova-tsn\nFernando Sebastián - Consultor senior y Data Scientist en Innova-tsn",
+        place: "ETSI Informáticos",
+        desc: "Este seminario ofrece una visión práctica sobre la industrialización de soluciones de inteligencia artificial mediante la aplicación de los principios de MLOps y LLMOps. A través de casos de uso reales, se presentan las diferentes estrategias para diseñar, desplegar, monitorizar y gobernar modelos de IA en entornos empresariales, abordando aspectos como la automatización de pipelines, la gestión de infraestructuras, los roles y metodologías de trabajo y las fases de implantación de un proyecto. Un enfoque orientado a comprender cómo convertir desarrollos de IA en soluciones escalables, seguras y preparadas para su uso en producción.",
+        image: "/images/2025/seminario1.jpg",
         hue: 250,
       },
     ],
@@ -104,19 +88,11 @@ const YEARS: YearBlock[] = [
       {
         date: "",
         title: "Desde IA Generativa hasta IAs Agenticas: un cambio de paradigma",
-        speaker: "Roberto Lara Martín - Consultor senior en Innova-tsn",
-        place: "ETSI Informáticos, Aula 6102",
-        desc: "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje.",
-        image: "/images/2026/seminario.jpg",
-        hue: 250,
-      },
-      {
-        date: "",
-        title: "From Generative AI to Agentic AI: a paradigm shift ",
-        speaker: "Roberto Lara Martín - Senior Consultant en Innova-tsn",
-        place: "ETSI Informáticos, Aula 6102",
-        desc: "Cómo escribir un prompt para obtener el resultado deseado de un modelo de lenguaje.",
-        image: "/images/2026/seminario.jpg",
+        speaker:
+          "Juan Ignacio Moreno - Responsable de Reino Unido\nSuman Ganguly - Responsable de Elexon y director del proyecto de digitalización del BSC\nLeyre Sánchez Viñuela - Consultora de Procesamiento del Lenguaje Natural (NLP)\nEmiliano Escoda - Arquitecto de Soluciones Senior",
+        place: "ETSI Informáticos",
+        desc: "Este seminario presenta un caso real de transformación digital liderado por Innova-tsn para Elexon, centrado en la evolución de la experiencia de los agentes del mercado eléctrico mediante el uso de digitalización e inteligencia artificial. A lo largo de la sesión se expone el ciclo completo de implantación de una solución software en un entorno real, desde la identificación de la necesidad y la generación de la oportunidad hasta la ejecución del proyecto.\nSe abordan aspectos clave como la gestión de la fase de preventa, el diseño de la experiencia de usuario (UX/UI), la definición de una solución técnica alineada con los requisitos del negocio y la construcción del sistema bajo un enfoque ágil. Asimismo, se analiza la aplicación de técnicas de IA para mejorar la búsqueda inteligente, ofreciendo una visión práctica de cómo la inteligencia artificial puede potenciar soluciones digitales complejas en entornos empresariales.",
+        image: "/images/2023/seminario1.jpg",
         hue: 250,
       },
     ],
@@ -185,7 +161,7 @@ function SeminariosPage() {
               </button>
 
               {isOpen && (
-                <div className="grid gap-3 border-t border-electric/30 p-6 md:grid-cols-2">
+                <div className="grid gap-3 border-t border-electric/30 p-6 md:grid-cols-1">
                   {block.seminars.map((s) => (
                     <article
                       key={s.title}
@@ -212,9 +188,12 @@ function SeminariosPage() {
                           <Calendar size={12} /> {s.date}
                         </div>
                         <h3 className="mt-2 font-display text-base font-bold">{s.title}</h3>
-                        <p className="mt-2 text-sm text-white/70">{s.desc}</p>
+                        <p className="mt-2 text-sm text-white/70 whitespace-pre-line">{s.desc}</p>
+                        <p className="mt-2 text-sm text-white/70 whitespace-pre-line">
+                          {s.speaker}
+                        </p>
                         <div className="mt-3 flex flex-col gap-1 text-xs text-white/60">
-                          <span className="flex items-center gap-1">
+                          <span className="flex items-center gap-1 whitespace-pre-line">
                             <Users size={12} /> {s.speaker}
                           </span>
                           <span className="flex items-center gap-1">
