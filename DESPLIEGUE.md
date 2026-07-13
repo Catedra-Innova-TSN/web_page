@@ -144,7 +144,7 @@ README.md
 
 ```bash
 # 1. Copiar el repositorio al VPS
-git clone <repo-url> /ruta/catedra-web
+git clone <repo-url> /ruta/web_page
 
 # 2. Construir y levantar el contenedor
 docker compose up -d --build
