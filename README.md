@@ -21,6 +21,8 @@ También es posible la ejecución con bun.
 ### Requisitos previos
 
 - [npm](https://robots.uc3m.es/installation-guides/install-npm.html) instalado en tu sistema.
+- [Node.js](https://nodejs.org/) 20.19+ o 22.12+ instalado. Este proyecto usa Vite/TanStack Start y no arranca con Node 18.
+- Ejecuta los comandos desde la carpeta `web_page/`, que es donde está el `package.json`.
 
 ### 1. Instalar dependencias
 

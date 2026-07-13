@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .                            # Construye imagen desde Dockerfile en este directorio
+    container_name: catedra-innovatsn    # Nombre fijo del contenedor
+    restart: unless-stopped              # Se reinicia si se cae o el VPS se reinicia
+    networks:
+      - npm_network                      # Conecta a la red de Nginx Proxy Manager
+
+networks:
+  npm_network:
+    external: true                       # La red ya existe (la crea NPM), Docker no la gestiona
+    name: npm_network                    # Nombre exacto de la red de NPM en tu VPS
