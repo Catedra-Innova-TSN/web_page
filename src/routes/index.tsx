@@ -41,25 +41,25 @@ export const Route = createFileRoute("/")({
  */
 const PILLARS = [
   {
-    icon: "public/icons/2026/lupa.png",
+    icon: "icons/2026/lupa.png",
     title: "I+D+i para la sociedad",
     desc: "Aplicación práctica de datos y tecnología complementa a la perfección el enfoque académico de la UPM. Esta asociación permite la transferencia de los resultados de investigación en soluciones que benefician a la industria, la academia y a la sociedad en general.",
     hue: 250,
   },
   {
-    icon: "public/icons/2026/birrete.png",
+    icon: "icons/2026/birrete.png",
     title: "Fomento del Talento",
     desc: "La Cátedra fomenta un entorno de aprendizaje dinámico en el que los estudiantes de la UPM pueden interactuar con proyectos reales del sector de Innova-tsn. Esta exposición complementa su formación y les dota de habilidades para estar a la vanguardia del mercado laboral.",
     hue: 260,
   },
   {
-    icon: "public/icons/2026/mentoria.png",
+    icon: "icons/2026/mentoria.png",
     title: "Mentoring",
     desc: "Profesionales experimentados actuarán como mentores, guiando a los estudiantes para hacer puente entre la academia y la industria. Esta Cátedra busca nutrir a la sociedad de nuevas generaciones de profesionales capaces de abordar cualquier reto tecnológico. ",
     hue: 245,
   },
   {
-    icon: "public/icons/2026/mundo.png",
+    icon: "icons/2026/mundo.png",
     title: "Aplicación en el Mundo Real",
     desc: "papel de la UPM como nexo para la difusión del conocimiento, canalización de iniciativas científicas y de investigación, y el compromiso con la comunidad. Los proyectos de estudio, talleres y seminarios conjuntos ayudarán a resolver problemas del mundo real.",
     hue: 265,
